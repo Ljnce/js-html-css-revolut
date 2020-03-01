@@ -38,6 +38,20 @@ $('a i.far.fa-times-circle').click(function(){
     $('.header-right').slideUp(1000);
 })
 
+//Log in alert
+$("button").click(function(){
+    $("button").toggle("slow", function(){
+      alert("Accesso effettutato correttamente!");
+    });
+  });
+
+//Image animation Enter
+$("a h4").click(function(){
+    $('img.image').animate({
+      height: 'toggle'
+  })
+});
+
 // $( ".menu-item" ).click(function() {
 //   $(this).children('.dropdown-menu').toggleClass('ciao');
 //

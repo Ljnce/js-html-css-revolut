@@ -74,6 +74,24 @@ nav{
     justify-content: space-around;
 }
 
+img.image.right{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    position: relative;
+    float: right;
+    display: none;
+}
+
+img.image.left{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    position: relative;
+    float: left;
+    display: none;
+}
+
 /* .titolo h2::after {
     font-family: "Font Awesome 5 Free";
     content: '\f107';
@@ -121,9 +139,6 @@ i.far.fa-times-circle{
     background-color: #ededed;
 }
 
-.view{
-    border: 1px solid black;
-}
 
 #intermedio,
 #marathon,
