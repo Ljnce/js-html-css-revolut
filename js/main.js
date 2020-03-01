@@ -7,7 +7,7 @@ $('.titolo').click(function(){ //Se io premo sul div titlo, si attiva qualcosa..
     }else{
         $('.titolo').children('.dropdown').slideUp(500);//se premo su qualsiasi item, tutti i suoi figli tornano su
         $(this).children('.dropdown').slideToggle(1000);//toggleClass('ciao'); //se premo su menu item, suo filgio dropdown-menu, si vede o con crea classe (ciao che il toggle me la rende visibile)
-        
+
         $(this).children('h2').addClass('.rotate');
     }
 });
@@ -27,6 +27,16 @@ $('p').mouseenter(function(){
     $('p').toggleClass('color')
 })
 
+//Comparsa hamburger-menu;
+$('a i.fas.fa-hamburger').click(function(){
+    $('.header-right').slideToggle(1000);
+})
+
+
+//Chiudo hamburger-menu
+$('a i.far.fa-times-circle').click(function(){
+    $('.header-right').slideUp(1000);
+})
 
 // $( ".menu-item" ).click(function() {
 //   $(this).children('.dropdown-menu').toggleClass('ciao');

@@ -11,8 +11,9 @@ header {
 
 .container {
     height: 100%;
-    max-width: 1200px;
-    background-color: #8cd9b3;
+    max-width: 100vw;
+    background-color: lightgrey;
+    border-style: hidden hidden solid hidden;
 }
 
 .clearfix::after {
@@ -25,6 +26,15 @@ header {
     height: 100%;
     width: 20%;
     float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-left > img{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
 }
 
 .header-right {
@@ -35,14 +45,18 @@ header {
 
 .dropdown{
     display: none;
-    height: 200px;
-    width: 200px;
+    height: 230px;
+    width: 150px;
     background-color: white;
-    border: 1px solid #40bF80;
-    box-shadow: 10px 10px 5px #40bF80;
+    border: 1px solid #ededed;
+    box-shadow: 5px 5px 5px #40bF80;
     text-align: center;
     padding: 15px 0;
+    position: relative;
+}
 
+a{
+    text-decoration: none;
 }
 
 p{
@@ -55,12 +69,12 @@ p{
     color:red;
 }
 
-.menu{
+nav{
     display: flex;
     justify-content: space-around;
 }
 
-.titolo h2::after {
+/* .titolo h2::after {
     font-family: "Font Awesome 5 Free";
     content: '\f107';
     font-weight: 900;
@@ -70,13 +84,82 @@ p{
 
 .titolo h2.rotate::after {
     transform: rotate(180deg);
+} */
+
+
+h1{
+    text-align: center;
 }
 
 h2{
     font-size: 20px;
     text-align: center;
+    border: 1px solid black;
+    border-style: hidden hidden solid hidden;
+    font-weight: bolder;
+    color: black;
+    padding: 0 10px;
 }
 
 h4{
     padding: 5px 0;
+    color: black;
+}
+
+i.fas.fa-hamburger,
+i.far.fa-times-circle{
+    display: none;
+    color: black;
+}
+
+#base,
+#half-marathon,
+#ny,
+#london,
+#tokyo{
+    height: 200px;
+    background-color: #ededed;
+}
+
+.view{
+    border: 1px solid black;
+}
+
+#intermedio,
+#marathon,
+#boston,
+#berlin,
+#chicago{
+    height: 200px;
+    background-color: white;
+}
+
+
+/* Media */
+@media screen and (max-width: 1000px){
+    i.fas.fa-hamburger,
+    i.far.fa-times-circle{
+        display: block;
+    }
+
+    .header-right{
+        display: none;
+        height: 200px;
+        width: 100%;
+        background-color: #ededed;
+        position: absolute;
+    }
+
+
+    i.fas.fa-hamburger{
+        float: right;
+        font-size: 50px;
+        margin-right: 50px;
+        margin-top: 20px;
+    }
+
+    i.far.fa-times-circle{
+        float: left;
+        font-size: 30px;
+    }
 }
